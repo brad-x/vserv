@@ -3,8 +3,8 @@
 Service to monitor one or more vmx path[s] and restart the vmx[s] if necessary
 
 Requirements:
-    VMware Fusion 7.x Professional
-    OS X 10.9.5+ (compatible with 10.10)
+    VMware Fusion 7.x - 12.x Professional
+    OS X 10.9.5+ (compatible with 12.2.x)
 
 usage: vserv.py [-h] [--list] [--monitor] [--add ADD] [--remove REMOVE]
                 [--reset RESET] [--get-ip GET_IP]
@@ -48,9 +48,12 @@ from random import randint
 class VMXMonitor(object):
     '''Monitoring a vmx file'''
 
-    def __init__(self, 
-                plist = os.path.expanduser('~/Library/Preferences/com.github.vserv.plist'),
+    def __init__(self,
                 vmrun = '/Applications/VMware Fusion.app/Contents/Library/vmrun'):
+        if os.environ.get('SYSTEM_DAEMON', 'False').lower() in ('true', '1'):
+            plist = os.path.abspath('/Library/Preferences/com.github.vserv.plist')
+        else:
+            plist = os.path.expanduser('~/Library/Preferences/com.github.vserv.plist')
         self.plist = plist
         if not os.path.exists(self.plist):
             with open(plist, 'wb') as fd:
