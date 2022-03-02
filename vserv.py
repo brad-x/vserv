@@ -50,10 +50,7 @@ class VMXMonitor(object):
 
     def __init__(self,
                 vmrun = '/Applications/VMware Fusion.app/Contents/Library/vmrun'):
-        if os.environ.get('SYSTEM_DAEMON', 'False').lower() in ('true', '1'):
-            plist = os.path.abspath('/Library/Preferences/com.github.vserv.plist')
-        else:
-            plist = os.path.expanduser('~/Library/Preferences/com.github.vserv.plist')
+        plist = os.path.expanduser('~/Library/Preferences/com.github.vserv.plist')
         self.plist = plist
         if not os.path.exists(self.plist):
             with open(plist, 'wb') as fd:
