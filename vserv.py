@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/local/bin/python3
 '''
 Service to monitor one or more vmx path[s] and restart the vmx[s] if necessary
 
@@ -156,7 +156,8 @@ class VMXMonitor(object):
 
     def start_vmx(self, vmx):
         cmd = [self.vmrun, 'start', vmx, 'nogui']
-        task = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+        task = subprocess.Popen(cmd, start_new_session=True,
+				stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE)
         out, err = task.communicate()
         if err:
@@ -260,7 +261,6 @@ def main():
             try:
                 monitor = VMXMonitor()
                 for vmx in monitor.get_monitored():
-                    print(vmx)
                     if monitor.is_scheduled(vmx):
                         if not monitor.is_running(vmx):
                             print('Starting: %s' % vmx)
