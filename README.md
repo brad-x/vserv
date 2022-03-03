@@ -3,9 +3,9 @@ vserv
 
 Service to monitor one or more vmx path[s] and restart the vmx[s] if necessary.
 
-The idea here is to automate the spinning up or tearing down of VMware Fusion VMs. Support has been added to the [vfuse](https://github.com/chilcote/vfuse) script, allowing one to automate tests or perhaps, with some ingenuity, deploy VMs as a service.
+The idea here is to automate the spinning up or tearing down of VMware Fusion VMs.
 
-This script was inspired by conversations wtih [Gilbert Wilson](https://twitter.com/boyonwheels) at our nascent Seattle [MacHackNight meetup](https://groups.google.com/forum/#!searchin/macenterprise/ctdawe$20red$20door/macenterprise/T2L2j8SnNWc/eUcghNez5sMJ), and is built upon the superior ideas illustrated [here](https://github.com/boyonwheels/vmrun.wrapper).
+This script is forked from [chilcote/vserv](https://github.com/chilcote/vserv) and was inspired by the author in conversations wtih [Gilbert Wilson](https://twitter.com/boyonwheels) at our nascent Seattle [MacHackNight meetup](https://groups.google.com/forum/#!searchin/macenterprise/ctdawe$20red$20door/macenterprise/T2L2j8SnNWc/eUcghNez5sMJ), and is built upon the superior ideas illustrated [here](https://github.com/boyonwheels/vmrun.wrapper).
 
 Requirements
 ------------
