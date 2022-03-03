@@ -60,7 +60,7 @@ class VMXMonitor(object):
         self.vmrun = vmrun
 
     def set_start(self, vmx, job_id=None):
-        if not self.d or not vmx in self.d.values()[0]:
+        if not self.d or not vmx in list(self.d.values())[0]:
             if not job_id:
                 job_id = randint(1000, 9999)
             self.d[str(job_id)] = [str(vmx), 'start', '', '']
