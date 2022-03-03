@@ -5,7 +5,7 @@ Service to monitor one or more vmx path[s] and restart the vmx[s] if necessary.
 
 The idea here is to automate the spinning up or tearing down of VMware Fusion VMs.
 
-This script is forked from [chilcote/vserv](https://github.com/chilcote/vserv) and was inspired by the author in conversations wtih [Gilbert Wilson](https://twitter.com/boyonwheels) at our nascent Seattle [MacHackNight meetup](https://groups.google.com/forum/#!searchin/macenterprise/ctdawe$20red$20door/macenterprise/T2L2j8SnNWc/eUcghNez5sMJ), and is built upon the superior ideas illustrated [here](https://github.com/boyonwheels/vmrun.wrapper).
+This script is forked from [chilcote/vserv](https://github.com/chilcote/vserv) and was inspired by the author in conversations wtih [Gilbert Wilson](https://twitter.com/boyonwheels) at Seattle [MacHackNight meetup](https://groups.google.com/forum/#!searchin/macenterprise/ctdawe$20red$20door/macenterprise/T2L2j8SnNWc/eUcghNez5sMJ), and is built upon the superior ideas illustrated [here](https://github.com/boyonwheels/vmrun.wrapper).
 
 Requirements
 ------------
