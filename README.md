@@ -12,9 +12,9 @@ This script was inspired by conversations wtih [Gilbert Wilson](https://twitter.
 Requirements
 ------------
 
-+ VMware Fusion 7.x Professional
-+ OS X 10.10.2+
-+ python 2.7.x
++ VMware Fusion 7.x Professional or later (tested with 12.2.x)
++ OS X 10.10.2+ (tested with Monterey)
++ python 3.9.x
 
 Usage
 -----
