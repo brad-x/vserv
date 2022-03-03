@@ -5,12 +5,20 @@
 	<key>KeepAlive</key>
 	<true/>
 	<key>Label</key>
-	<string>com.github.vserv.monitor-system</string>
+	<string>com.github.vserv.monitor_system</string>
+	<key>StandardOutPath</key>
+	<string>/var/log/vserv.log</string>
+	<key>StandardErrorPath</key>
+	<string>/var/log/vserv.log</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/vserv.py</string>
 		<string>--monitor</string>
 	</array>
+	<key>UserName</key>
+	<string>brad</string>
+	<key>GroupName</key>
+	<string>staff</string>
 	<key>RunAtLoad</key>
 	<true/>
 </dict>
